@@ -1,10 +1,15 @@
-//your variable declarations here
+Spaceship bob = new Spaceship();
 public void setup() 
 {
-  //your code here
+  size(800, 800);
 }
 public void draw() 
 {
-  //your code here
+  bob.show();
 }
-
+public void keyPressed()
+{
+  if (keyCode == UP) {
+    bob.accelerate(.2);
+  }
+}
