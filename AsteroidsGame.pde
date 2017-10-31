@@ -1,13 +1,22 @@
 Spaceship bob = new Spaceship();
+Stars[] suns = new Stars[200];
 public void setup() 
 {
   size(800, 800);
+  for (int i = 0; i < suns.length; i++)
+  {
+    suns[i] = new Stars();
+  }
 }
 public void draw() 
 {
-  background(255);
+  background(0);
   bob.show();
   bob.move();
+  for (int i = 0; i < suns.length; i++)
+  {
+    suns[i].show();
+  }
 }
 public void keyPressed()
 {
@@ -25,5 +34,5 @@ public void keyPressed()
     bob.setDirectionY(0);
     bob.setX((int)(Math.random()*800));
     bob.setY((int)(Math.random()*800));
-}
+  }
 }
