@@ -32,7 +32,7 @@ public void keyPressed()
   if (keyCode == DOWN) {
     bob.setDirectionX(0);
     bob.setDirectionY(0);
-    bob.setX((int)(Math.random()*800));
-    bob.setY((int)(Math.random()*800));
+    bob.setX((int)(Math.random()*798)+1);
+    bob.setY((int)(Math.random()*798)+1);
   }
 }
