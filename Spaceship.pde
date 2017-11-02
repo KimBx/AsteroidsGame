@@ -6,7 +6,7 @@ class Spaceship extends Floater
      int[] yS = {-8, 0, 8, 0};
      xCorners = xS;
      yCorners = yS;
-     myColor = color(255);
+     myColor = color((int)(Math.random()*255)+1,(int)(Math.random()*255)+1,(int)(Math.random()*255)+1);
   }
   public void setX(int x) {myCenterX = x;}
   public int getX() {return (int)myCenterX;}
