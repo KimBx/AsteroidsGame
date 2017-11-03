@@ -1,5 +1,6 @@
 Spaceship bob = new Spaceship();
-Stars[] suns = new Stars[200];
+Stars [] suns = new Stars[200];
+Asteroid roid = new Asteroid();
 public void setup() 
 {
   size(800, 800);
@@ -11,6 +12,8 @@ public void setup()
 public void draw() 
 {
   background(0);
+  roid.show();
+
   bob.show();
   bob.move();
   for (int i = 0; i < suns.length; i++)
@@ -30,6 +33,11 @@ public void keyPressed()
     bob.turn(10);
   }
   if (keyCode == DOWN) {
+    bob.setDirectionX(0);
+    bob.setDirectionY(0);
+  }
+
+  if (key == 'h') {
     bob.setDirectionX(0);
     bob.setDirectionY(0);
     bob.setX((int)(Math.random()*798)+1);
