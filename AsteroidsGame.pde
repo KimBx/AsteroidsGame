@@ -13,7 +13,7 @@ public void draw()
 {
   background(0);
   roid.show();
-
+  roid.move();
   bob.show();
   bob.move();
   for (int i = 0; i < suns.length; i++)
